@@ -1,0 +1,22 @@
+<div class="zone livraison {{ zone.subType }}">
+    <div class="flex-">
+        <div class="livraison_1">
+            <div class="flex">
+            {{ zone.detail(locale).description | raw }}
+            </div>
+        </div>
+        <div class="livraison_2">
+            <div class="flex">
+            {{ zone.detail(locale).description2 | raw }}
+            </div>
+        </div>
+    </div>
+        <h4>{{ zone.detail(locale).title3 }}</h4>
+        <div class="logos_paiement">
+            {% for photo in zone.photos | slice(0,4) %}
+                <div class="photo apparition" data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale)}}">
+                    <img alt="{{ photo.detail(locale).title }}"/>
+                </div>
+            {% endfor %}
+        </div>
+</div>

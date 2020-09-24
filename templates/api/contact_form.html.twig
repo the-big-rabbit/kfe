@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+    {% for child in form %}  
+        <div class="form-group" data-class="{{ (child.vars.attr['class'] is defined ) ? child.vars.attr['class'] : '' }}">
+            {{ form_row(child,{'attr': {'placeholder': child.vars.label ?? '' }} ) }}
+        </div>
+    {% endfor %}
+    <div class="form-group" >
+        <div class="g-recaptcha" data-sitekey="6LfJJb0ZAAAAAJFHo-80onv8mP59zubol4M-BEUP" ></div>
+    </div>
+    <input type="submit" value="{{ 'submit' | trans }}" class="blue-btn"/>
+{{ form_end(form) }}

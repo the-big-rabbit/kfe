@@ -1,0 +1,46 @@
+security:
+    encoders:
+        ScyLabs\NeptuneBundle\Entity\Admin:
+            algorithm: auto
+    providers:
+        users_in_memory: { memory: null }
+        neptune_admin_provider:
+            entity:
+                class: ScyLabs\NeptuneBundle\Entity\Admin
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        admin:
+            anonymous: true
+            lazy: true
+            pattern: ^/admin
+            provider: neptune_admin_provider
+            guard:
+                authenticators:
+                    - ScyLabs\NeptuneBundle\Security\NeptuneAuthenticator
+            logout:
+                path: neptune_logout
+            remember_me:
+                secret :   env(APP_SECRET)
+        main:
+            anonymous: true
+            lazy: true
+            provider: users_in_memory
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    role_hierarchy:
+        ROLE_USER_VALIDATED: ROLE_USER
+        ROLE_ADMIN: ROLE_USER_VALIDATED
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN,ROLE_USER,ROLE_USER_VALIDATED,ROLE_ALLOWED_TO_SWITCH]
+    access_control:
+        - { path: ^/admin-login, roles: IS_AUTHENTICATED_ANONYMOUSLY ,requires_channel: https}
+        - { path: ^/admin, roles: ROLE_ADMIN ,requires_channel: https}

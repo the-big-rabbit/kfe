@@ -1,0 +1,137 @@
+{% trans_default_domain 'app' %}
+<!doctype html>
+<html lang="{{ locale }}">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ infos.analyticsId }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ infos.analyticsId }}');
+    </script>
+
+    <meta charset="utf-8"/>
+    <title>{{ (page.detail(locale).metaTitle is null) ? (page.detail(locale).title ~ ' | ' ~ infos.name ~' - ' ~infos.city) : page.detail(locale).metaTitle  }}</title>
+    <meta name="Description" content="{{ getFirstText(page,locale) | striptags | raw }}"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    {% if app.environment == 'prod' %}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet"/>
+    {% else %}
+        <link href="{{ asset('css/style.less') }}?v={{ random() }}" rel="stylesheet/less"/>
+    {% endif %}
+
+    {% block css %}
+    {% endblock css %}
+
+    {% if app.environment == 'dev' %}
+        <script src="{{ asset('js/lib/less.min.js') }}"></script>
+        <script>less = { useFileCache: false }</script>
+    {% endif %}
+    {% if is_detail is defined %}
+        <link href="{{ asset('js/lib/swiper/css/swiper.min.css') }}" rel="stylesheet" media="all"/>
+    {% endif %}
+
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}" />
+
+    <script type="text/javascript">
+        var webpActive = {{ webpActiveInImagick() ? 'true' : 'false' }};
+        var root = "{{ asset('') }}";
+        var lang_get = "{{ locale }}";
+        var SwipperJs = {
+            name: 'Swipper',
+            sources: [
+                {
+                    src: "{{ asset('js/lib/swiper/css/swiper.min.css') }}",
+                    preload: true
+                },
+                {
+                    src: "{{ asset('js/lib/swiper/js/swiper.min.js') }}"
+                },
+            ]
+        };
+        var MaterializeJs = {
+            name: 'Materialize',
+            sources: [
+                {
+                    src: "{{ asset('js/lib/materialize/materialize.css')  }}",
+                    preload: true
+                },
+                {
+                    src: "{{ asset('js/lib/materialize/materialize.js') }}"
+                },
+            ]
+        };
+
+        let dependances = [
+            {
+                src: "{{ asset('js/edc.min.js') }}",
+                require: [
+                    {
+                        name: "jQuery",
+                        sources: [
+                            {
+                                src: "{{ asset('js/lib/jquery/jquery.min.js') }}"
+                            }
+                        ]
+                    },
+                    {
+                        name: "jQueryUI",
+                        sources: [
+                            {
+                                src: "{{ asset('js/lib/jquery-ui/jquery-ui.min.js') }}"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                src: "{{ asset('js/header.js') }}"
+            },
+            {
+                src: "{{ asset('js/footer.js') }}"
+            },
+            {
+                src: "{{ asset('js/lib/aos/aos.css') }}",
+                preload: true
+            },
+            {
+                src: "{{ asset('js/lib/jquery-ui/jquery-ui.structure.min.css') }}",
+                preload: true
+            },
+            {
+                src: "{{ asset('js/lib/jquery-ui/jquery-ui.theme.min.css') }}",
+                preload: true
+            },
+            {
+                src: "{{ asset('js/lib/aos/aos.js') }}",
+                callback: () => {
+                    AOS.init({once: true, duration: 800, disable: '', offset: 300, delay:400});
+                }
+            },
+            {% if jsZones is defined %}
+            {% for zone in jsZones %}
+            {
+                src: "{{ asset('js/zone/'~zone~'.js') }}",
+                require: [
+                    SwipperJs,
+                ]
+            },
+            {% endfor %}
+            {% endif %}
+        ];
+    </script>
+    <script src="{{ asset('js/lazyLoad.min.js') }}"></script>
+</head>
+
+<body class="">
+    {% include 'header.html.twig' %}
+    {% block content %}
+    {% endblock %}
+    {% include 'footer.html.twig' %}
+
+    <script src="{{ asset('js/lib/script-loader/dist/scriptLoader.min.js') }}" type="text/javascript" onload="scriptLoader = new ScriptLoader();scriptLoader.add(dependances);scriptLoader.load();"></script>
+    <script>{% block afterScriptLoader %}{% endblock %}{{ showHook(_self,'ScyLabsNeptuneFront.afterScriptLoader') }} scriptLoader.load();</script>
+</body>
+</html>

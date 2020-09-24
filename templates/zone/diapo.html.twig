@@ -1,0 +1,22 @@
+<div class="zone diapo {{ zone.subType }}">
+    <div class="content_diapo swiper-container">
+        <div class="swiper-wrapper">
+            <div class="flex-diapo">
+                <a href="/" title="Accueil Le Kfé"><h1>{{ zone.detail(locale).title }}</h1></a>
+                <span class="chapo">{{ zone.detail(locale).description | raw }}</span>
+                <div class="livraison">{{ zone.detail(locale).title2 }}</div>
+                <div class="decouvrir">{{ zone.detail(locale).description2 | raw }}</div>
+                <a class="digit-ancre" href="#carte">
+                    <img class="lazy point digit" data-src="{{ asset('img/doigt.svg') }}" alt="Scroll"/>
+                </a>
+            </div>
+            {% for photo in zone.photos %}
+                <div class="slide swiper-slide">
+                    <div class="photo" data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
+                        <img alt="{{ photo.detail(locale).title }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

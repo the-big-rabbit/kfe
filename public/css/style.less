@@ -1,0 +1,83 @@
+@import "structure.less";
+@font-face {
+	font-family: 'Mistral';
+	src: url('fonts/Mistral.eot');
+	src: url('fonts/Mistral.eot?#iefix') format('embedded-opentype'),
+	url('fonts/Mistral.woff2') format('woff2'),
+	url('fonts/Mistral.woff') format('woff'),
+	url('fonts/Mistral.ttf') format('truetype'),
+	url('fonts/Mistral.svg#Mistral') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@media screen and (min-width: 415px) {
+	body, header, footer {
+		max-width: 414px;
+		width: 414px;
+		margin: 0 auto;
+	}
+}
+
+html { font-size: 62.5%; color:#787878;/* font-size:10px;*/scroll-behavior: smooth;overflow-x: hidden;}
+body { font:1.6rem/1.42 'Lato', sans-serif; overflow-x: hidden;transition: all 150ms;-webkit-transition: all 150ms;color: rgba(0, 0, 0, 0.72);}
+h2,h3,h4,h5,h6{
+	font-family: 'Montserrat',sans-serif;
+	text-transform: capitalize;
+	letter-spacing: 3.5px;
+	color: rgba(0, 0, 0, 0.72);
+}
+h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 3.2px;
+}
+.chapo {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 1.3rem;
+}
+.align_content_right {
+	align-content: right;}
+
+.text_right {text-align: right;}
+
+.top0 { top:0;}
+.left0 { left:0;}
+.right0{right:0}
+.photo {
+	justify-content: center;
+	background: #ededed;
+	> img {
+		object-fit: cover;
+		object-position: 50% 50%;
+		opacity: 0;
+		transition: all 500ms;
+	}
+	&.loaded{
+		> img{
+			opacity: 1;
+		}
+	}
+}
+p{
+	line-height: 2;
+}
+a{
+	color:#330099;
+	transition: color 500ms;
+	&:hover{
+		color:#e13536;
+	}
+}
+@import "globals.less";
+@import "import.less";
+
+.aos-init:not(.aos-animate):after {
+	position:fixed;
+}

@@ -1,0 +1,16 @@
+<div id="carte" class="zone carte {{ zone.subType }}">
+    <div class="separateur"></div>
+    <h1>{{ zone.detail(locale).title }}</h1>
+    {% set elementTypes = page.elementTypes %}
+    <div id="accordion">
+    {% for elementType in elementTypes %}
+        {% for element in elementType.elements %}
+            <h3>{{ element.detail(locale).name }}</h3>
+            <div class="{{ element.detail(locale).name | clean | lower }}">
+                <p>{{ element.detail(locale).description | raw }}</p>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    </div>
+    <div class="bg-burger"></div>
+</div>

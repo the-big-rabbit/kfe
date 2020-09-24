@@ -1,0 +1,13 @@
+<div class="zone photo_cadre {{ zone.subType }}">
+    <div class="content_diapo swiper-container">
+        <div class="swiper-wrapper">
+            {% for photo in zone.photos %}
+                <div class="slide swiper-slide">
+                    <div class="photo" data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
+                        <img alt="{{ photo.detail(locale).title }}"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
