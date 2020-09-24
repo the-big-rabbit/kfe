@@ -1,0 +1,45 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    # permet de stocker l'ensemble du contenu du dossier /var/lib/mysql dans un disque persistant
+    volumes:
+      - ./docker/data/db:/var/lib/mysql
+    # politique de redémarrage du conteneur en cas d'erreur fatale
+    restart: always
+    # valeurs des différents mots de passe et utilisateurs qui doivent exister sur cette base
+    environment:
+      MYSQL_USER: kfe
+      MYSQL_PASSWORD: JXtwMF436sadoY
+      MYSQL_DATABASE: kfe
+    # command: --max-allowed-packet=67108864 --sql_mode="STRICT_ALL_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER"
+    ports:
+      - 8086:3306
+      - 8087:33060
+    networks:
+      - web
+
+  apache:
+    build:
+      context: .
+      dockerfile: .github/workflows/docker/apache/Dockerfile.app
+    restart: always
+    links:
+      - "db:db"
+    volumes:
+      - ./app:/app
+    ports:
+      - "8081:80"
+    environment:
+      DATABASE_URL: "mysql://kfe:JXtwMF436sadoY@db/kfe"
+    labels: 
+      - "traefik.enable=true"
+      - "traefik.http.routers.menukfe.rule=Host(`menukfe.com`)"
+      - "traefik.http.routers.menukfe.entrypoints=websecure"
+    networks:
+      - web
+volumes:
+  app:
+networks:
+  web:
+    external: true
