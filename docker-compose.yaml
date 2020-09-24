@@ -22,7 +22,7 @@ services:
   apache:
     build:
       context: .
-      dockerfile: .github/workflows/docker/Dockerfile.app
+      dockerfile: .github/workflows/Dockerfile.app
     restart: always
     links:
       - "db:db"
