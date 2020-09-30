@@ -7,6 +7,10 @@ $(".zone.photo_cadre").each(function () {
         autoplay: {
             delay: 10000,
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         on: {
             init: function () {
                 const photos = this.$el[0].querySelectorAll(
