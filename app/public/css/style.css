@@ -2095,6 +2095,7 @@ footer .scroll .fa {
   letter-spacing: 1.29px;
   margin-bottom: 1rem;
   display: block;
+  text-transform: uppercase;
 }
 .zone.livraison .flex- .livraison_1 .flex,
 .zone.livraison .flex- .livraison_2 .flex {
