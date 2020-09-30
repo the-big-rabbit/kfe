@@ -11,7 +11,6 @@ $(".zone.diapo").each(function () {
         autoplay: {
             delay: 10000,
         },
-        effect: "fade",
         on: {
             init: function () {
                 const photos = this.$el[0].querySelectorAll(
