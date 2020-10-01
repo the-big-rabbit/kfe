@@ -1811,6 +1811,7 @@ footer .scroll .fa {
   width: 100%;
   max-width: 35rem;
   margin: -10px auto 0 auto;
+  position: relative;
 }
 .zone.carte .ui-icon-triangle-1-s,
 .zone.carte .ui-icon-triangle-1-e {
@@ -1912,6 +1913,13 @@ footer .scroll .fa {
   line-height: normal;
   letter-spacing: 0.95px;
   color: #312f2f;
+}
+.zone.carte #accordion .bg-element {
+  position: absolute;
+  bottom: 0;
+}
+.zone.carte #accordion .bg-element .bg-element .photo {
+  background: transparent;
 }
 .zone.carte #accordion .finger-food {
   background-image: url("../img/frites.svg");
