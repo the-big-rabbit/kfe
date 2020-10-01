@@ -1823,7 +1823,7 @@ footer .scroll .fa {
 }
 .zone.carte #accordion h2 {
   font-family: 'Mistral', serif;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   letter-spacing: normal;
   margin-bottom: 1.5rem;
 }
@@ -1847,7 +1847,7 @@ footer .scroll .fa {
 .zone.carte #accordion table td {
   line-height: 1.8;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   height: unset !important;
 }
 .zone.carte #accordion table td:first-child {
@@ -1882,10 +1882,11 @@ footer .scroll .fa {
   margin-top: 0.3rem;
   margin-bottom: 1.3rem;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1;
   font-style: normal;
-  color: darkgray;
+  color: #312f2f;
+  letter-spacing: normal;
 }
 .zone.carte #accordion table td p em:first-child {
   display: inline-block;
@@ -2057,7 +2058,7 @@ footer .scroll .fa {
   background: #312f2f;
   color: white;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
 }
 .zone.livraison .flex- {
   display: flex;
@@ -2094,6 +2095,7 @@ footer .scroll .fa {
   letter-spacing: 1.29px;
   margin-bottom: 1rem;
   display: block;
+  text-transform: uppercase;
 }
 .zone.livraison .flex- .livraison_1 .flex,
 .zone.livraison .flex- .livraison_2 .flex {
