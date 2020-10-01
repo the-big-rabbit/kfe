@@ -5,9 +5,28 @@
   overflow: hidden;
   background: linear-gradient(180deg, #46b6df, #3f94bc);
 
-  .no-slide.no-swiper-slide {
-    position: absolute;
+  .no-swiper-wrapper {
+    //position: relative;
+    .no-slide.no-swiper-slide {
+      position: absolute;
+      &:nth-child(1) {
+        left: 0;
+        z-index: 5;
+      }
+      &:nth-child(2) {
+        z-index: 4;
+      }
+      &:nth-child(3) {
+        right: 0;
+        z-index: 3;
+      }
+      &:nth-child(4) {
+        top: 0;
+        z-index: 2;
+      }
+    }
   }
+
 
   &:before {
     content: "";

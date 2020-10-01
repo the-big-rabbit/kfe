@@ -1646,8 +1646,23 @@ footer .scroll .fa {
   overflow: hidden;
   background: linear-gradient(180deg, #46b6df, #3f94bc);
 }
-.zone.diapo .no-slide.no-swiper-slide {
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide {
   position: absolute;
+}
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(1) {
+  left: 0;
+  z-index: 5;
+}
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(2) {
+  z-index: 4;
+}
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(3) {
+  right: 0;
+  z-index: 3;
+}
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) {
+  top: 0;
+  z-index: 2;
 }
 .zone.diapo:before {
   content: "";
