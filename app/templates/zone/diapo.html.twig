@@ -10,7 +10,7 @@
                     <img class="lazy point digit" data-src="{{ asset('img/doigt.svg') }}" alt="Scroll"/>
                 </a>
             </div>
-            {% for photo in zone.photos | slice(0,3) %}
+            {% for photo in zone.photos | slice(0,4) %}
                 <div class="no-slide no-swiper-slide">
                     <div class="photo" data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
                         <img alt="{{ photo.detail(locale).title }}"/>

@@ -1,3 +1,4 @@
+/*
 $(".zone.diapo").each(function () {
     var zone = $(this);
     var slider = new Swiper(zone.find(".content_diapo").eq(0)[0], {
@@ -33,3 +34,4 @@ $(".zone.diapo").each(function () {
         },
     });
 });
+*/
