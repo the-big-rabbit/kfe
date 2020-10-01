@@ -1645,17 +1645,6 @@ footer .scroll .fa {
   max-height: 720px;
   overflow: hidden;
   background: linear-gradient(180deg, #46b6df, #3f94bc);
-  /*&:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/group-213.svg");
-    background-repeat: no-repeat;
-    background-position: -5% 95%;
-    opacity: 0.4;
-  }*/
 }
 .zone.diapo:before {
   content: "";
@@ -1697,7 +1686,7 @@ footer .scroll .fa {
   font-size: 1.6rem;
   padding: 2rem 5rem;
 }
-.zone.diapo .swiper-slide .photo {
+.zone.diapo .photo {
   display: flex;
   align-items: center;
   justify-content: flex-start;
