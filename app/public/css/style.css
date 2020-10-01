@@ -1673,7 +1673,7 @@ footer .scroll .fa {
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(5) {
   right: 1rem;
-  top: 24rem;
+  bottom: 24rem;
 }
 .zone.diapo:before {
   content: "";
