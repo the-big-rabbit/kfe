@@ -1646,23 +1646,34 @@ footer .scroll .fa {
   overflow: hidden;
   background: linear-gradient(180deg, #46b6df, #3f94bc);
 }
+.zone.diapo .no-swiper-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide {
   position: absolute;
-}
-.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(1) {
-  left: 0;
-  z-index: 5;
+  margin-top: -10rem;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(2) {
-  z-index: 4;
+  z-index: 5;
+  left: 4rem;
+  top: -5rem;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(3) {
-  right: 0;
+  left: 8rem;
   z-index: 3;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) {
-  top: 0;
+  top: -13rem;
   z-index: 2;
+  left: 8rem;
+}
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) img {
+  height: 10rem;
+}
+.zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(5) {
+  right: -1rem;
+  top: -11rem;
 }
 .zone.diapo:before {
   content: "";
