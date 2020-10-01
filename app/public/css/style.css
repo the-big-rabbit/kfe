@@ -2116,6 +2116,10 @@ footer .scroll .fa {
   text-transform: uppercase;
   margin-top: 10rem;
 }
+.zone.livraison h4.title_livraison {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
 .zone.livraison .logos_paiement {
   display: flex;
   justify-content: center;
