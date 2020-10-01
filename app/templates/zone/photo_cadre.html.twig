@@ -4,7 +4,9 @@
             {% for photo in zone.photos %}
                 <div class="slide swiper-slide">
                     <div class="photo" data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale) }}">
-                        <img alt="{{ photo.detail(locale).title }}"/>
+                        <a href="{{ asset('uploads/'~ photo.path) | thumbnail(1500) }}" data-fancybox="gallery{{ zone.id }}" class="fancy">
+                            <img alt="{{ photo.detail(locale).title }}"/>
+                        </a>
                     </div>
                 </div>
             {% endfor %}
