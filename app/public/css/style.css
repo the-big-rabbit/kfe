@@ -1821,11 +1821,6 @@ footer .scroll .fa {
 .zone.carte #accordion {
   position: relative;
   z-index: 1;
-  /*.boissons {
-      background-image: url("../img/boisson.svg");
-      background-repeat: no-repeat;
-      background-position: 5% 95%;
-    }*/
 }
 .zone.carte #accordion h2 {
   font-family: 'Mistral', serif;
@@ -1920,66 +1915,6 @@ footer .scroll .fa {
 }
 .zone.carte #accordion .bg-element .photo {
   background: transparent;
-}
-.zone.carte #accordion .finger-food {
-  background-image: url("../img/frites.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .panini {
-  background-image: url("../img/pannini.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .sandwichs {
-  background-image: url("../img/sandwich-black.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .pates {
-  background-image: url("../img/pasta-1.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .burgers {
-  background-image: url("../img/realburger.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .burritos {
-  background-image: url("../img/burrito.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .plats {
-  background-image: url("../img/waffle.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .salades {
-  background-image: url("../img/waffle.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .bruschetta {
-  background-image: url("../img/burger.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .pizzas {
-  background-image: url("../img/pizza.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .crepes {
-  background-image: url("../img/crepes.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
-}
-.zone.carte #accordion .desserts {
-  background-image: url("../img/desserts.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
 }
 .zone.photo_cadre {
   width: 100%;
