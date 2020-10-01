@@ -1820,6 +1820,11 @@ footer .scroll .fa {
 .zone.carte #accordion {
   position: relative;
   z-index: 1;
+  /*.boissons {
+      background-image: url("../img/boisson.svg");
+      background-repeat: no-repeat;
+      background-position: 5% 95%;
+    }*/
 }
 .zone.carte #accordion h2 {
   font-family: 'Mistral', serif;
@@ -1907,11 +1912,6 @@ footer .scroll .fa {
   line-height: normal;
   letter-spacing: 0.95px;
   color: #312f2f;
-}
-.zone.carte #accordion .boissons {
-  background-image: url("../img/boisson.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 95%;
 }
 .zone.carte #accordion .finger-food {
   background-image: url("../img/frites.svg");

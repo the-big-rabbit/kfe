@@ -8,6 +8,15 @@
             <h3>{{ element.detail(locale).name }}</h3>
             <div class="{{ element.detail(locale).name | clean | lower }}">
                 <p>{{ element.detail(locale).description | raw }}</p>
+                <div class="bg-element">
+                    {% for photo in element.photos | slice(0,1) %}
+                        <a href="{{ path('detail_element',{'_locale':locale,'slug':element.detail(locale).slug }) }}">
+                            <div class="photo apparition" data-id="{{ photo.id }}" data-name="{{ fileName(photo,locale)}}">
+                                <img alt="{{ photo.detail(locale).title }}"/>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
         {% endfor %}
     {% endfor %}
