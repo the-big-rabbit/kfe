@@ -1652,7 +1652,7 @@ footer .scroll .fa {
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide {
   position: absolute;
-  margin-top: -10rem;
+  margin-top: -6rem;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(2) {
   z-index: 5;
@@ -1664,16 +1664,16 @@ footer .scroll .fa {
   z-index: 3;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) {
-  top: -13rem;
+  top: -12rem;
   z-index: 2;
-  left: 8rem;
+  left: 13rem;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) img {
   height: 10rem;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(5) {
-  right: -1rem;
-  top: -11rem;
+  right: 1rem;
+  top: 24rem;
 }
 .zone.diapo:before {
   content: "";
