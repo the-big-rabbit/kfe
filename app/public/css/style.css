@@ -1658,6 +1658,10 @@ footer .scroll .fa {
   z-index: 5;
   left: 4rem;
   top: -5rem;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(3) {
   left: 8rem;
@@ -1739,6 +1743,16 @@ footer .scroll .fa {
   }
   to {
     transform: translateY(-15px);
+  }
+}
+@keyframes slidein {
+  from {
+    left: 34rem;
+    top: -35rem;
+  }
+  to {
+    left: 4rem;
+    top: -5rem;
   }
 }
 .zone.carte {
