@@ -29,13 +29,13 @@
         z-index: 2;
         top: -12rem;
         left: 13rem;
-        animation-name: fade;
+        animation-name: fadeup;
         img {
           height: 10rem;
         }
       }
       &:nth-child(5) {
-        right: 1rem;
+        right: 4rem;
         bottom: 24rem;
         animation-name: slideright;
       }
@@ -140,6 +140,18 @@
     opacity: 1;
   }
 }
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    top: -30rem;
+  }
+
+  to {
+    opacity: 1;
+    left: 8rem;
+    top: 0;
+  }
+}
 
 @keyframes slideup {
   from {
@@ -162,7 +174,7 @@
   }
 
   to {
-    right: 1rem;
+    right: 4rem;
     bottom: 24rem;
     opacity: 1;
   }

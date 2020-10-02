@@ -1672,13 +1672,13 @@ footer .scroll .fa {
   z-index: 2;
   top: -12rem;
   left: 13rem;
-  animation-name: fade;
+  animation-name: fadeup;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) img {
   height: 10rem;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(5) {
-  right: 1rem;
+  right: 4rem;
   bottom: 24rem;
   animation-name: slideright;
 }
@@ -1768,6 +1768,17 @@ footer .scroll .fa {
     opacity: 1;
   }
 }
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    top: -30rem;
+  }
+  to {
+    opacity: 1;
+    left: 8rem;
+    top: 0;
+  }
+}
 @keyframes slideup {
   from {
     top: -52rem;
@@ -1787,7 +1798,7 @@ footer .scroll .fa {
     opacity: 0;
   }
   to {
-    right: 1rem;
+    right: 4rem;
     bottom: 24rem;
     opacity: 1;
   }
