@@ -11,31 +11,27 @@
     .no-slide.no-swiper-slide {
       position: absolute;
       margin-top: -6rem;
-
+      animation-duration: 3s;
+      animation-iteration-count: 1;
+      animation-direction: alternate;
       &:nth-child(2) {
         z-index: 5;
-        left: 4rem;
-        top: -5rem;
-        animation-duration: 3s;
-        animation-name: slidein;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
+        animation-name: slideleft;
       }
       &:nth-child(3) {
         left: 8rem;
         z-index: 3;
+        animation-name: fade;
       }
       &:nth-child(4) {
-        top: -12rem;
         z-index: 2;
-        left: 13rem;
+        animation-name: fade;
         img {
           height: 10rem;
         }
       }
       &:nth-child(5) {
-        right: 1rem;
-        bottom: 24rem;
+        animation-name: slideright;
       }
     }
   }
@@ -116,14 +112,52 @@
   }
 }
 
-@keyframes slidein {
+@keyframes slideleft {
   from {
-    left: 34rem;
+    left: -34rem;
     top: -35rem;
+    opacity: 0;
   }
 
   to {
     left: 4rem;
     top: -5rem;
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+   opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideup {
+  from {
+    top: -52rem;
+    left: 13rem;
+    opacity: 0;
+  }
+
+  to {
+    top: -12rem;
+    left: 13rem;
+    opacity: 1;
+  }
+}
+@keyframes slideright {
+  from {
+    right: -31rem;
+    bottom: 54rem;
+    opacity: 0;
+  }
+
+  to {
+    right: 1rem;
+    bottom: 24rem;
+    opacity: 1;
   }
 }
