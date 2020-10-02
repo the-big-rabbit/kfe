@@ -1672,7 +1672,7 @@ footer .scroll .fa {
   z-index: 2;
   top: -12rem;
   left: 13rem;
-  animation-name: fadeup;
+  animation-name: slideup;
 }
 .zone.diapo .no-swiper-wrapper .no-slide.no-swiper-slide:nth-child(4) img {
   height: 10rem;
