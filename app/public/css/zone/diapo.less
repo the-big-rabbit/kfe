@@ -16,6 +16,10 @@
         z-index: 5;
         left: 4rem;
         top: -5rem;
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
       }
       &:nth-child(3) {
         left: 8rem;
@@ -109,5 +113,17 @@
   }
   to {
     transform: translateY(-15px);
+  }
+}
+
+@keyframes slidein {
+  from {
+    left: 34rem;
+    top: -35rem;
+  }
+
+  to {
+    left: 4rem;
+    top: -5rem;
   }
 }
