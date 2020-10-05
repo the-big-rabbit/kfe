@@ -8,37 +8,39 @@
   .no-swiper-wrapper {
     position: relative;
     min-height: 100vh;
-    .no-slide.no-swiper-slide {
-      position: absolute;
-      margin-top: -6rem;
-      animation-duration: 3s;
-      animation-iteration-count: 1;
-      animation-direction: alternate;
-      &:nth-child(2) {
-        z-index: 5;
-        left: 4rem;
-        top: -5rem;
-        animation-name: slideleft;
-      }
-      &:nth-child(3) {
-        left: 8rem;
-        z-index: 3;
-        //animation-name: fade;
-      }
-      &:nth-child(4) {
-        z-index: 2;
-        top: -12rem;
-        left: 13rem;
-        animation-duration: 5s;
-        animation-name: slideup;
-        img {
-          height: 10rem;
+    div.logo {
+      .no-slide.no-swiper-slide {
+        position: absolute;
+        margin-top: -6rem;
+        /*animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        &:nth-child(2) {
+          z-index: 5;
+          left: 4rem;
+          top: -5rem;
+          animation-name: slideleft;
         }
-      }
-      &:nth-child(5) {
-        right: 4rem;
-        bottom: 24rem;
-        animation-name: slideright;
+        &:nth-child(3) {
+          left: 8rem;
+          z-index: 3;
+          //animation-name: fade;
+        }
+        &:nth-child(4) {
+          z-index: 2;
+          top: -12rem;
+          left: 13rem;
+          animation-duration: 5s;
+          animation-name: slideup;
+          img {
+            height: 10rem;
+          }
+        }
+        &:nth-child(5) {
+          right: 4rem;
+          bottom: 24rem;
+          animation-name: slideright;
+        }*/
       }
     }
   }
