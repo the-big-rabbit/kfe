@@ -1668,12 +1668,12 @@ footer .scroll .fa {
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(2) {
   z-index: 3;
 }
-.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(2) img {
-  height: 10rem;
-}
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) {
   z-index: 2;
   transform: translate(0, -120px);
+}
+.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) img {
+  height: 10rem;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(4) {
   transform: translate(80px, -100px);
