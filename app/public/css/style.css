@@ -1658,16 +1658,16 @@ footer .scroll .fa {
 .zone.diapo div.logo .no-slide.no-swiper-slide {
   position: absolute;
 }
-.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(2) {
+.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(1) {
   z-index: 5;
 }
-.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) {
+.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(2) {
   z-index: 3;
 }
-.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(4) {
+.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) {
   z-index: 2;
 }
-.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(4) img {
+.zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) img {
   height: 10rem;
 }
 .zone.diapo:before {
