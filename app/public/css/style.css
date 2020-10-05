@@ -1669,6 +1669,7 @@ footer .scroll .fa {
   animation-name: patin;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(2) {
+  animation-duration: 0.5s;
   z-index: 3;
   animation-name: logo;
 }
@@ -1682,7 +1683,7 @@ footer .scroll .fa {
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(4) {
   transform: translate(80px, -100px);
-  animation-name: coucou;
+  animation-name: coucou, logo;
 }
 .zone.diapo:before {
   content: "";
