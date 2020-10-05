@@ -1783,6 +1783,11 @@ footer .scroll .fa {
     transform: translate(80px, -100px);
   }
 }
+@media all and (min-height: 700px) {
+  .zone.diapo div.logo {
+    height: 55rem;
+  }
+}
 .zone.carte {
   background: linear-gradient(180deg, #46b6df, #3f94bc);
   padding-bottom: 9rem;
