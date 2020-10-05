@@ -1660,23 +1660,29 @@ footer .scroll .fa {
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide {
   position: absolute;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(1) {
   z-index: 5;
   transform: translate(-80px, -15px);
+  animation-name: patin;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(2) {
   z-index: 3;
+  animation-name: logo;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) {
   z-index: 2;
   transform: translate(0, -120px);
+  animation-name: burger;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(3) img {
   height: 10rem;
 }
 .zone.diapo div.logo .no-slide.no-swiper-slide:nth-child(4) {
   transform: translate(80px, -100px);
+  animation-name: coucou;
 }
 .zone.diapo:before {
   content: "";
@@ -1744,17 +1750,15 @@ footer .scroll .fa {
     transform: translateY(-15px);
   }
 }
-@keyframes slideleft {
+@keyframes patin {
   from {
-    top: -5rem;
-    left: -24rem;
+    transform: translate(-180px, -15px);
   }
   to {
-    top: -5rem;
-    left: 4rem;
+    transform: translate(-80px, -15px);
   }
 }
-@keyframes fade {
+@keyframes logo {
   from {
     opacity: 0;
   }
@@ -1762,26 +1766,20 @@ footer .scroll .fa {
     opacity: 1;
   }
 }
-@keyframes slideup {
+@keyframes burger {
   from {
-    top: -102rem;
-    left: 13rem;
-    opacity: 0;
+    transform: translate(0, -220px);
   }
   to {
-    top: -12rem;
-    left: 13rem;
-    opacity: 1;
+    transform: translate(0, -120px);
   }
 }
-@keyframes slideright {
+@keyframes coucou {
   from {
-    right: 15rem;
-    bottom: 15rem;
+    transform: translate(0, 0);
   }
   to {
-    right: 4rem;
-    bottom: 24rem;
+    transform: translate(80px, -100px);
   }
 }
 .zone.carte {
