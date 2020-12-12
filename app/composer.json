@@ -1,13 +1,6 @@
 {
     "type": "project",
     "license": "proprietary",
-    "repositories": [
-        {
-            "name": "scylabs/neptune-bundle",
-            "type": "vcs",
-            "url": "git@github.com:ScyLabs/NeptuneBundle.git"
-        }
-    ],
     "require": {
         "php": "^7.2.5",
         "ext-ctype": "*",
